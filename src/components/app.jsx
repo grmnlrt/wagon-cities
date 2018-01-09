@@ -12,8 +12,8 @@ const cities = [
 const App = () => {
   return (
     <div className="app">
-      <CityList cities={cities} />
-      <ActiveCity city={cities[0]} />
+      <CityList />
+      <ActiveCity city={cities[0]}/>
     </div>
   );
 };
