@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class ActiveCity extends Component {
   render() {
     const style = {
       width: '100%'
+    }
+
+    if(this.props.city === null) {
+      return (
+        <div className="active-city">
+          <p>Select a city</p>
+        </div>
+      )
     }
 
     return (
@@ -16,4 +25,10 @@ class ActiveCity extends Component {
   }
 }
 
-export default ActiveCity;
+function mapStateToProps(state) {
+  return {
+    city: state.selectCity
+  };
+}
+
+export default connect(mapStateToProps, null)(ActiveCity);

@@ -22,10 +22,10 @@ class CityList extends Component {
 }
 
 function mapStateToProps(state) {
-    return {
-      cities: state.cities
-    };
-  }
+  return {
+    cities: state.cities
+  };
+}
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(

@@ -1,6 +1,6 @@
 import React from 'react';
 import CityList from '../containers/city_list'
-import ActiveCity from './active_city'
+import ActiveCity from '../containers/active_city'
 
 // TODO: remove this line and use Redux
 const cities = [
@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div className="app">
       <CityList />
-      <ActiveCity city={cities[0]}/>
+      <ActiveCity />
     </div>
   );
 };
